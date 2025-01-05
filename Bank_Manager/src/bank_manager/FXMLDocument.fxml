@@ -47,7 +47,7 @@
             <TextField layoutX="142.0" layoutY="160.0" promptText="Enter Your Amount " />
          </children>
       </Pane>
-      <Button layoutX="37.0" layoutY="270.0" mnemonicParsing="false" text="Save">
+      <Button fx:id="btn1" layoutX="37.0" layoutY="270.0" mnemonicParsing="false" onAction="#btnsaveaction1" text="Save">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
