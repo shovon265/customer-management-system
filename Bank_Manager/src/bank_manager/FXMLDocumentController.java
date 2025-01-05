@@ -20,6 +20,8 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private Label label;
+    @FXML
+    private Button btn1;
     
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
@@ -30,5 +32,9 @@ public class FXMLDocumentController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void btnsaveaction1(ActionEvent event) {
+    }
     
 }
