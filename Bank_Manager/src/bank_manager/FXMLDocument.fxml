@@ -39,7 +39,7 @@
       </Pane>
       <ImageView fitHeight="292.0" fitWidth="229.0" layoutX="315.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../Downloads/image.png" />
+            <Image url="@image/image.png" />
          </image>
       </ImageView>
       <Button fx:id="btn1" layoutX="160.0" layoutY="216.0" mnemonicParsing="false" onAction="#btnsaveaction1" text="Save">
