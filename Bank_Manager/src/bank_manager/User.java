@@ -9,27 +9,35 @@ package bank_manager;
  * @author user
  */
 public class User {
-        private int id;
+    
     private String email;
     private String password;
     private String first_name;
     private String last_name;
     private String full_name;
     private String city;
+    private Float balance;
 
-    public User(int id, String email, String password, String first_name, String last_name, String full_name, String city) {
-        this.id = id;
+    public User( String email, String password, String first_name, String last_name, String full_name, String city,Float Balance) {
+        
         this.email = email;
         this.password = password;
         this.first_name = first_name;
         this.last_name = last_name;
         this.full_name = full_name;
         this.city = city;
+        this.balance= balance;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setBalance(Float balance) {
+        this.balance = balance;
     }
+
+    public Float getBalance() {
+        return balance;
+    }
+
+    
 
     public void setEmail(String email) {
         this.email = email;
@@ -55,9 +63,7 @@ public class User {
         this.city = city;
     }
 
-    public int getId() {
-        return id;
-    }
+   
 
     public String getEmail() {
         return email;
@@ -82,4 +88,5 @@ public class User {
     public String getCity() {
         return city;
     }
+ 
 }

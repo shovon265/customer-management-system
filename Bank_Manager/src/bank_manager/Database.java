@@ -39,7 +39,7 @@ public class Database {
             User user = null;
             while (rs.next()) {
 //                 public User(int id, String email, String password, String first_name, String last_name, String full_name, String city)
-                user = new User(rs.getInt("id"), rs.getString("email"), rs.getString("password"), rs.getString("first_name"), rs.getString("last_name"),rs.getString("full_name"),rs.getString("city"));
+                user = new User( rs.getString("email"), rs.getString("password"), rs.getString("first_name"), rs.getString("last_name"),rs.getString("full_name"),rs.getString("city"),rs.getFloat("Balance"));
                 userList.add(user);
             }
         } catch (Exception e) {
