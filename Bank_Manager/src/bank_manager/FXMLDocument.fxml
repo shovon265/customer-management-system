@@ -22,43 +22,37 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="142.0" layoutY="112.0" promptText="Enter Your Name" />
+            <TextField fx:id="first" layoutX="142.0" layoutY="112.0" promptText="Enter Your Name" />
             <Label layoutX="23.0" layoutY="146.0" text="Last Name:" textFill="#24ff2d">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="142.0" layoutY="143.0" promptText="Enter Your Last Name" />
-            <Label layoutX="26.0" layoutY="178.0" text="Full Name:" textFill="#24ff2d">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-            </Label>
-            <TextField layoutX="140.0" layoutY="175.0" promptText="Enter Your Full Name" />
-            <Label layoutX="31.0" layoutY="15.0" text="Id :" textFill="#24ff2d">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-            </Label>
-            <TextField layoutX="140.0" layoutY="12.0" promptText="Enter Your Id" />
+            <TextField fx:id="last" layoutX="142.0" layoutY="143.0" promptText="Enter Your Last Name" />
             <Label layoutX="27.0" layoutY="48.0" text="Email:" textFill="#24ff2d">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="140.0" layoutY="45.0" promptText="Enter Your Email" />
+            <TextField fx:id="email" layoutX="140.0" layoutY="45.0" promptText="Enter Your Email" />
             <Label layoutX="26.0" layoutY="81.0" text="Password:" textFill="#24ff2d">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="140.0" layoutY="78.0" promptText="Enter Your Password" />
-            <Label layoutX="34.0" layoutY="211.0" text="City" textFill="#24ff2d">
+            <TextField fx:id="password" layoutX="140.0" layoutY="78.0" promptText="Enter Your Password" />
+            <Label layoutX="41.0" layoutY="175.0" text="City" textFill="#24ff2d">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <TextField layoutX="140.0" layoutY="208.0" promptText="Enter Your City" />
+            <TextField fx:id="city" layoutX="142.0" layoutY="172.0" promptText="Enter Your City" />
+            <TextField fx:id="balance" layoutX="142.0" layoutY="211.0" promptText="Enter your balance" />
+            <Label layoutX="34.0" layoutY="214.0" text="Balance" textFill="#24ff2d">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
       <ImageView fitHeight="345.0" fitWidth="248.0" layoutX="310.0" pickOnBounds="true" preserveRatio="true">
@@ -76,5 +70,6 @@
             <Font size="10.0" />
          </font>
       </Label>
+      <Button layoutX="37.0" layoutY="294.0" mnemonicParsing="false" onAction="#handleBack" text="Go Back" />
     </children>
 </AnchorPane>

@@ -16,7 +16,7 @@ public class User {
     private String last_name;
     private String full_name;
     private String city;
-    private Float balance;
+    private Float Balance;
 
     public User( String email, String password, String first_name, String last_name, String full_name, String city,Float Balance) {
         
@@ -26,15 +26,15 @@ public class User {
         this.last_name = last_name;
         this.full_name = full_name;
         this.city = city;
-        this.balance= balance;
+        this.Balance= Balance;
     }
 
     public void setBalance(Float balance) {
-        this.balance = balance;
+        this.Balance = balance;
     }
 
     public Float getBalance() {
-        return balance;
+        return Balance;
     }
 
     
