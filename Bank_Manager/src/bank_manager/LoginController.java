@@ -19,6 +19,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import java.sql.*;
 
 /**
  * FXML Controller class
@@ -48,17 +49,45 @@ public class LoginController implements Initializable {
 
     @FXML
     private void handleLogin(ActionEvent event) throws IOException {
-if (email.getText().trim().equals("admin@gmail.com") && pas.getText().trim().equals("admin123")) {
+        Database db = new Database();
+        Connection conn = db.getConnnection();
+        String query = "SELECT * FROM admin WHERE email = ?";
     try {
-        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        
+        PreparedStatement pt = conn.prepareStatement(query);
+        pt.setString(1, email.getText());
+        ResultSet rs;
+        rs = pt.executeQuery();
+        if(rs.next()){
+            
+            if(pas.getText().equals(rs.getString("password"))){
+                        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
         Stage stage = (Stage) (((Node) event.getSource()).getScene().getWindow());
         stage.setScene(new Scene(root));
         stage.setTitle("Dashboard");
         stage.show(); // Ensure the stage is updated and displayed
-    } catch (IOException e) {
+            }else{
+                e_msg.setText("Incorrect Password");
+            }
+                    
+
+        } else{
+            e_msg.setText("Account does not exist!");
+        }
+        
+
+    } catch (Exception e) {
         e.printStackTrace(); // Log the error for debugging
     }
 }
+
+    @FXML
+    private void handleSignup(ActionEvent event) throws IOException {
+        
+        Parent root = FXMLLoader.load(getClass().getResource("signup.fxml"));
+        Stage stage = (Stage)(((Node)event.getSource()).getScene().getWindow());
+        stage.setScene(new Scene(root));
+        stage.show();
     }
 
     
